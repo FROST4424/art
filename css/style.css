@@ -1,0 +1,521 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --text_sh: 1px 1px 2px black;
+    --box_sh:2px 4px 10px black;
+    --box_sh_:0px 0px 25px 2px black;
+}
+
+h1 {
+
+    color: white;
+    text-shadow: var(--text_sh);
+    font-size: 45px;
+    padding-left: 5vw;
+}
+
+body{
+
+    background: linear-gradient(0deg, rgb(227, 227, 227), #8c8787);
+    min-height: 150vh;
+}
+.header_nav {
+
+    background: linear-gradient(180deg, black,#9c9898 );
+    width: 100vw;
+    height: 10vw;
+    display: flex;
+    transition: all .7s;
+
+}
+
+.header_nav a {
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid white;
+    width: 100%;
+    height: 70px;
+    padding: 20px 45px;
+    background-color:black;
+    font-weight: normal;
+    text-shadow: var(--text_sh);
+    white-space: nowrap;
+    transition: all .7s;
+
+}
+
+
+.header_nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    transition: all .7s;
+
+}
+
+.header_nav ul li:hover {
+    background-color: gray;
+    transition: all .5s;
+
+}
+
+.header_nav a:hover {
+    box-shadow: 1px 1px 20px 5px white;
+    text-shadow: none;
+    transition: all .7s;
+
+}
+
+.promo {
+    height: 200px;
+    transition: 3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background:  url(../img/preview.jpg) no-repeat bottom -500px right 0/350px auto;
+}
+
+.promo:hover {
+
+    height: 250px;
+    transition: 3s;
+    cursor: pointer;
+    background: rgb(202, 202, 202) url(../img/preview.jpg) no-repeat bottom 10px right 0/350px auto;
+
+}
+
+
+.phrase {
+
+    width: 350px;
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+    text-shadow: var(--text_sh);
+    padding-left: 5vw;
+    
+}
+.vop{
+    font-size: 50px;
+    text-align: center;
+    border-radius: 15px;
+}
+.foto{
+    display: flex;
+    background:url(../img/vop.jpg);
+    height: 40vh;
+    background-position: center;
+    background-size:contain;
+    float: left;
+    margin-right: 1em;
+    width: 40%;
+    border-radius: 15px;
+}
+
+  
+.foto_phrase {
+    display: flex;
+    width: 55%;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    
+}
+  
+.isk{
+    background: rgb(154, 154, 154);
+}
+
+.wrap_pictures{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    gap: 2vw;
+}
+
+.item1{
+    background: url(../img/otziv3.jpeg);
+    background-size: cover;
+}
+.item2{
+    background: url(../img/golland.jpg);
+    background-size: contain;
+}
+.item3{
+    background: url(../img/stik1.jpg);
+}
+.item4{
+    background: url(../img/booro.jpg);
+    background-size: contain;
+}
+.pict{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgb(162, 162, 162);
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+    margin: 10vh 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: var(--box_sh);
+    background-position: center;
+    transition: all .5s;
+
+}
+.pict a{
+    color:white ;
+    text-decoration:none;
+    text-shadow: var(--text_sh);
+    transition:all  .5s;
+
+}
+.pict a:hover{
+    color: rgb(66, 66, 66);
+    text-shadow: 2px 2px 2px white;
+    transition:all  .5s;
+}
+.promo_text_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+    transition: 3s;
+    background: gray url(../img/picter_footer.jpg) no-repeat bottom -500px right 0/350px auto;
+}
+.promo_text_card:hover{
+    height: 100px;
+    transition: 3s;
+    cursor: pointer;
+    background: gray;
+}
+.otziv{
+    min-height: 100vh;
+}
+.main_slide{
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(59, 56, 56);
+    position: relative;
+    z-index: -100;
+}
+.container>.box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: 100%,100%;
+    z-index: 999;
+    opacity: 0;
+    animation:move 20s infinite; 
+}
+
+.about{
+    height: 100px;
+}
+
+
+.container>.box:nth-child(1){
+    background-image: url("../img/1.jpg");
+}
+.container>.box:nth-child(2){
+    background-image: url("../img/die.jpg");
+    animation-delay: 5s;
+}
+.container>.box:nth-child(3){
+    background-image: url("../img/el.png");
+    animation-delay: 10s;
+}
+.container>.box:nth-child(4){
+    background-image: url("../img/otziv3.jpeg");
+    animation-delay: 15s;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    
+}
+.content>h2{
+    font-size: 3vw;
+    margin-bottom: 1.2rem;
+}
+.content>p{
+    font-size: 1.3vw;
+    color: #fff;
+    
+    text-shadow: var(--text_sh);
+}
+
+@keyframes move{
+    0%{
+       opacity: .5; 
+       
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    30%{
+        opacity:0;
+    }
+    70%{
+        transform: scale(1.2);
+    }
+}
+
+.main_foto{
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+}
+.info_photo_g1,.info_photo_g2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    width: 45%;
+    transition: all .8s;
+    font-size: 17px;
+}
+
+.photo_g1,.photo_g2{
+    width:600px; height:300px;
+    background-image: url("../img/golland11.jpeg");
+    background-position:  center;
+    background-size: cover;
+    border-radius: 15px;
+    border: 2px solid black;
+    transition: all .8s;
+}
+.photo_g1:hover,.photo_g2:hover{
+    box-shadow: 2px 2px 20px 7px white;
+    border: 2px solid rgb(238, 255, 0);
+    transition: all .8s;
+
+}
+.photo_g2{
+    background-image: url("../img/golland.jpg");
+}
+.photo_g1:hover{
+    border: 2px solid rgb(76, 150, 180);
+}
+  
+.gollan{
+    background: linear-gradient(180deg, #8c8787, rgb(27, 27, 27));
+}
+.info_photo_g2{
+    color: white;
+    text-shadow:var(--text_sh); 
+}
+  
+  
+.main_gal{
+    background-color: rgb(59, 56, 56);
+}
+.gal_wrap{
+    padding: 2vw 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    justify-content: center;
+    align-items: center;
+}
+.gal_wrap .img{
+    height: 250px;
+    width: 350px;
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
+   
+}
+.gal_wrap .img img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+    cursor: pointer;
+    }
+.gal_wrap .img img:hover{
+    transform: scale(1.3);
+}
+.wrap_open_image{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+
+}
+.open_image{
+    height: 85vh;
+    width: 85vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: var(--box_sh_);
+    
+}
+
+.zakrivashka{
+    position: absolute;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border-radius: 100%;
+    background-color: white;
+    justify-content:center;
+    align-items:center;
+    align-self:flex-start;
+    text-align: center; 
+    margin: 10px 10px;
+    box-shadow: var(--box_sh_);
+    transition: all .7s;
+}
+.zakrivashka a{
+    text-decoration:none ;
+    color:black;
+    font-weight: bold;
+    transition: all .7s;
+}
+.zakrivashka:hover{
+    transform: scale(1.2);
+    transition: all .7s;
+    box-shadow: 0px 0px 25px 2px white;
+    
+
+}
+main{
+    display: flex;
+    justify-content: center;
+
+}
+.wrap{
+    width: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1.4;
+    border: 5px  solid black;
+    border-radius: 15px;
+    background-color: #858585;
+    color: white;
+    text-shadow: var(--text_sh);
+    margin-bottom: 16px;
+
+}
+
+
+.sochi{
+    min-height: 50vh;
+}
+.h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+.phrase{
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+#open_image1{
+    background-image: url(../img/stik1.jpg);
+}
+#open_image2{
+    background-image: url(../img/stik2.jpg);
+}
+#open_image3{
+    background-image: url(../img/stik3.jpg);
+}
+#open_image4{
+    background-image: url(../img/stik4.png);
+}
+#open_image5{
+    background-image: url(../img/stik5.png);
+}
+#open_image6{
+    background-image: url(../img/stik6.png);
+}
+#open_image7{
+    background-image: url(../img/love.png);
+}  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+@media (max-width: 768px) {
+    .foto {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .foto_phrase {
+      width: 100%;
+      margin-left: 0;
+    }
+}

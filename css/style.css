@@ -419,11 +419,13 @@ body{
     
 
 }
+
 .wrapwrap{
     display: flex;
-    justify-content: center;}
-
+    justify-content: center;
+}
 .wrap{
+    align-self: center;
     width: 70%;
     text-align: center;
     display: flex;
